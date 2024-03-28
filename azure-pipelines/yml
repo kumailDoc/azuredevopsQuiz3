@@ -1,0 +1,30 @@
+name: CI
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: self-hosted  # Use the self-hosted agent
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2  # Checkout the GitHub repository
+
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v1
+        with:
+          dotnet-version: '8.0.101'  # Specify the .NET version
+
+      - name: Restore dependencies
+        run: dotnet restore
+
+      - name: Build
+        run: dotnet build --configuration Release
+
+      - name: Test
+        run: dotnet test --configuration Release --no-restore --verbosity normal
+
+      - name: Publish
+        run: dotnet publish --configuration Release --output ./publish
