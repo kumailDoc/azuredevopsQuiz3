@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v8.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v8.0": {
+      "Quiz3SampleProject/1.0.0": {
+        "runtime": {
+          "Quiz3SampleProject.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Quiz3SampleProject/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
